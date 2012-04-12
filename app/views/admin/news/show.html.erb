@@ -1,0 +1,9 @@
+<h1>Tytuł:</h1>
+<h2><%= @news.title %></h2>
+<h1>Treść:</h1>
+<div style="font-size: 16px;">
+  <%= raw(@news.content) %>
+</div>
+<br/><br/>
+<%= button_to "Edytuj", edit_admin_news_path(@news), :method => :get, :class => "left"%>
+<%= button_to "Powrót", admin_news_index_path, :method => :get, :class => "left" %>

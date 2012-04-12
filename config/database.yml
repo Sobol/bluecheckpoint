@@ -1,0 +1,29 @@
+development:
+  adapter: mysql2
+  database: checkn_development
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+  username: root
+  password: root
+  host: localhost
+
+test:
+  adapter: mysql2
+  database: checkn_test
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+  username: root
+  password: root
+  host: localhost
+
+production:
+  adapter: mysql2
+  database: checkn_production
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+  username: root
+  password: root
+  host: localhost

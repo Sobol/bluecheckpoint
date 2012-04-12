@@ -1,0 +1,71 @@
+.jcarousel {
+  list-style: none;
+}
+
+.jcarousel ul {
+  width: 20000em !important;
+  position: absolute;
+  list-style: none;
+}
+
+.jcarousel ul li {
+  width: 84px !important;
+  height: 84px;
+}
+
+.jcarousel ul li a {
+  line-height: 84px;
+}
+
+.jcarousel ul li a img {
+  display: table-cell; 
+  vertical-align: middle;
+}
+
+#carousel, .jcarousel-clip, .carousel_container{
+  height: 92px !important;
+}
+
+.carousel_container {
+  width: 383px;
+  position: absolute;
+  margin-left: 30px !important;
+  margin: auto;
+  overflow: hidden;
+}
+
+.thumb {
+  outline: 0;
+  cursor: pointer;
+  float: left;
+  position: relative;
+  border: 3px solid #b3b3cf;
+  margin: 1px 3px 1px 3px;
+  overflow: hidden;
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+}
+
+#carousel .next, #carousel .prev {
+  width: 23px;
+  outline: 0;
+  height: 92px;
+}
+
+#carousel .next{
+  float: right;
+  background: url(/images/next.png) 6px 45% no-repeat;
+}
+
+#carousel .prev{
+  float: left;
+  background: url(/images/prev.png) 0 45% no-repeat;
+}
+
+ul li.thumb:hover{
+  border-color: #fff;
+  box-shadow: 0px 0px 3px #000;
+  -moz-box-shadow: 0px 0px 3px #000;
+  -webkit-box-shadow: 0px 0px 3px #000;
+}

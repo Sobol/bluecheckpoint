@@ -1,0 +1,44 @@
+<!doctype html>
+<%# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -%>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en" <%= yield :xml_namespace %>> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en" <%= yield :xml_namespace %>> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en" <%= yield :xml_namespace %>> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en" <%= yield :xml_namespace %> xmlns:bluecheckpoint="http://www.bluecheckpoint.com/ns#"> <!--<![endif]-->
+<html scrolling="no">
+<head>
+  <meta charset="utf-8">
+  <title>Check N</title>
+  <%= csrf_meta_tag %>
+  <meta name="description" content="Checkn is a small privet project.">
+
+  <%= yield :stylesheets%>
+  <%# controller stylesheets can be found in app/controller_name.css -%>
+  <%= controller_stylesheet_link_tag %>
+  <%# action stylesheets can be found in app/controller_name/action_name.css -%>
+  <%= action_stylesheet_link_tag %>
+</head>
+<body id="<%= id_for_body %>" class="<%= browser_class%>">
+  <div id="page">
+    <% if user_signed_in? %>
+      <header>
+        <div id="user_nav">
+            Witaj  <%= current_user.email %>.
+            <%= link_to "Wyloguj", destroy_user_session_path, :method => :delete %>
+        </div>
+        <%= render :partial => "layouts/admin_header" %>
+      </header>
+    <% end %>
+    <div id="main">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+  </div>
+
+
+  <%= stylesheet_link_tag 'app/layouts/admin' %>
+  <%= javascript_include_tag 'lib/jquery-1.5.1', 'lib/rails', 'app/admin' %>
+  <%= yield :javascripts %>
+
+</body>
+</html>

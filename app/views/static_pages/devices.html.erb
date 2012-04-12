@@ -1,0 +1,55 @@
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'lib/jquery.jcarousel', 'lib/jquery.fancybox-1.3.4.pack', 'app/company' %>
+  <%= stylesheet_link_tag "app/jquery.fancybox-1.3.4" %>
+<% end %>
+
+<div class="static devices">
+ <% if @photos.count > 4 %>
+    <div id="carousel" class="jcarousel">
+      <div class="carousel_container">
+        <ul>
+          <% @photos.each do |p|%>
+            <li class="thumb">
+              <%= link_to image_tag(p.photo(:thumb)), p.photo(:original) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+  <p>
+    Urządzenie "BLUE CHECK POINT" jest stacjonarnym skanerem elektroniki samochodowej zgodnej
+    ze standardem EOBD (posiada go większość pojazdów po 2000 r.) umożliwiającym odczyt i kasowanie błędów
+    sterownika silnika przez użytkownika pojazdu.
+  </p>
+  <p>
+    Jedynym warunkiem jest posiadanie przez pojazd gniazda OBD 16pin.
+  </p>
+  <p>
+    Specjalnie zaprojektowany interfejs użytkownika pozwala każdemu kierowcy odczytać i skasować
+    błędy wygenerowane przez sterowniki pojazdu - czyli poznać przyczynę pojawiania się złowieszczej
+    kontrolki "CHECK ENGINE!"za pomocą czterech przycisków i prostych
+    komunikatów (oczywiście w języku polskim).
+  </p>
+  <p>
+    Unikalna konstrukcja menu gwarantuje dostęp tylko do bezpiecznych funkcji diagnostyki
+    uniemożliwiając tym samym spowodowanie jakichkolwiek uszkodzeń, czy niepożądanych efektów nawet przez
+    nieumiejętną obsługę.
+  </p>
+  <p>
+    Urządzenie nie wymaga żadnych dodatkowych źródeł zasilania i samo nie wytwarza żadnego napięcia
+    - jest zasilane wyłącznie z gniazda diagnozowanego pojazdu (12v) co eliminuje niebezpieczeństwo
+    porażenia lub uszkodzenia samochodu.
+  </p>
+  <p>
+    Urządzenie jest dostępne w 2 wariantach: większym wolnostojącym lub mniejszym - wiszącym
+    (mocowanym do ściany lub słupa).
+    Oba warianty mogą występować zarówno z wrzutnikiem monet jak też bez niego (na życzenie).
+  </p>
+  <p>
+    Konstrukcja urządzenia czyni je idealnym elementem dodatkowego wyposażenia stacji paliw, myjni, 
+parkingów, stacji LPG, itp.
+  </p>
+</div>
+
+<p class="bottom-bg"></p>

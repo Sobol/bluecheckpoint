@@ -1,0 +1,294 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery.fancybox-1.3.4
+ *= require_tree .
+*/
+
+html {
+  background: image-url("main_background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.ie_bg_fix {
+  z-index: -1;
+  position:fixed; top:0; left:0; width:100%; height:100%;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src= image_path('main_background.png'), sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src= image_path('main_background.png', sizingMethod='scale')";
+}
+
+body {
+  font-family: "Archer", arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+#background-image {
+  position: absolute;
+  z-index: -1;
+}
+
+#page {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.welcome-controller.index-action #circle {
+  left: 130px;
+  top: 35px;
+  width: 550px;
+  position: absolute;
+}
+
+#circle-content {
+  width: 255px;
+  position: absolute;
+}
+
+.welcome-controller.index-action #circle-content {
+  left: 258px;
+  top: 153px;
+  width: 292px;
+}
+
+.static {
+  left: 573px !important;
+  top: -620px !important;
+}
+
+#subheader, #main {
+  display: none !important;
+}
+
+#images {
+  position: relative;
+}
+
+/* ------------------------------------------ */
+
+#images .main-image,
+#images img.hidden {
+  margin-top: -481px;
+  margin-left: -198px;
+  position: absolute;
+  width: 355px;
+}
+
+#images img.hidden {
+  display: none;
+}
+
+.main {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#main {
+  float: right;
+  width: 458px;
+  margin-top: 70px;
+  color: white;
+  font-size: 13px;
+  text-align: justify;
+}
+
+#main .static {
+  padding: 10px 10px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src= image_path('static-bg.png.png'),sizingMethod='scale');
+}
+
+#main .static.normal {
+  padding: 10px 10px;
+  background-image: image_url("static-bg.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+#main-bg {
+  width: 458px;
+  height: 450px;
+}
+
+#sub-dot {
+  position: relative;
+  top: -557px;
+  left: 193px;
+}
+
+#submenu-lines {
+  position: relative;
+  clear: both;
+  top: -15px;
+  right: 104px;
+}
+
+.pagination,
+.bottom-bg {
+  background-image: image_url("static-bg-bottom.png");
+  background-repeat:repeat-x;
+  height: 30px;
+  width: 458px;
+  margin-top: 0px;
+}
+
+.static .centered {
+  margin-top: 30px;
+  font-size: 14px;
+  text-align: center;
+  height: 251px;
+}
+
+#main-bg.news {
+  margin-top: 35px;
+  height: 105px  !important;
+}
+
+.static.news {
+  top: -95px !important;
+}
+
+#map {
+  width: 480px;
+  margin-top: 25px;
+}
+
+.map-info {
+  margin-top: 20px;
+}
+
+.news-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  height: 470px;
+}
+
+li:nth-child(2) {
+  margin-top: -480px !important;
+}
+
+.news-container li {
+  padding: 0px 20px 0px 20px;
+}
+
+.news-container p {
+  font-size: 15px;
+}
+
+
+.ie6 .news-bg,
+.ie7 .news-bg,
+.ie8 .news-bg {
+  position: absolute;
+}
+
+.news-bg {
+  padding: 0;
+  margin: 0;
+  height: 470px;
+  width: 458px;
+  z-index: -1;
+}
+
+.pagination {
+  text-align: right;
+  line-height: 30px;
+}
+
+.pagination a{
+  color: white !important;
+  text-decoration: none;
+}
+
+ul.news-container li a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  left: 380px;
+  top: -10px;
+}
+
+.popup {
+  width: 500px;
+}
+
+.pagination .current {
+  font-size: 14px !important;
+}
+
+.created-at {
+  font-size: 11px !important;
+  margin-top: -10px;
+}
+
+.static div {
+  height: 470px;
+}
+
+p.search {
+  background: image_url("input.png") no-repeat;
+  width: 193px;
+  height: 47px;
+  float: left;
+  padding-right: 8px;
+}
+
+input, #q {
+  border: 0;
+  background: none;
+  height: 29px;
+  line-height: 29px;
+  color: white;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+#q {
+  width: 187px;
+}
+
+#commit input {
+  width: 27px;
+  padding: 0;
+  cursor: pointer;
+}
+
+#commit {
+  float: left;
+  width: 27px;
+  height: 47px;
+  background-repeat: no-repeat;
+  background-image: image_url("search.png");
+}
+
+#commit.active,
+#commit.hovered {
+  background-image: image_url("search_active.png") !important;
+}
+
+.bottom {
+  position: relative;
+  bottom: 0;
+}
+
+#main-text {
+  font-size: 18px;
+}
+
+.not-visible {
+  visibility: hidden;
+}

@@ -1,0 +1,31 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
+//
+//= require jquery
+//= require jquery_ujs
+//= require jquery.jcarousel
+//= require jquery.fancybox-1.3.4.pack
+//= require_tree .
+
+$(function() {
+  $("#commit input").mouseover(function(e){
+    $(this).parent().toggleClass("hovered");
+  }).mouseout(function(){
+    $(this).parent().toggleClass("hovered");
+  });
+  
+  if ($("html").hasClass("ie6") || $("html").hasClass("ie7") || $("html").hasClass("ie8")) {
+    $("html").prepend('<div class="ie_bg_fix"></div>');
+  } else {
+    $("#main .static").addClass("normal");
+  }
+});

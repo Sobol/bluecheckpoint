@@ -1,0 +1,21 @@
+<div id="menu">
+  <%= image_tag "logo_small.png", alt: 'top bar', id: 'menu-top-bar' -%>
+  <div id="menu-buttons">
+    <p id="pomoc-button"
+    class="<%= params[:action] == 'help' || params[:action] == 'codes' || params[:action] == 'connectors' || params[:action] == 'cars' ? 'active':''%>">
+      <%= link_to "", help_static_pages_path %>
+    </p>
+    <p id="partnerzy-button"
+    class="<%= params[:action] == 'partners' || params[:action] == 'technodiag' || params[:action] == 'imedia' ? 'active':''%>">
+      <%= link_to "", partners_static_pages_path %>
+    </p>
+    <p id="urzadzenia-button"
+    class="<%= params[:action] == 'devices' || params[:action] == 'localization' || params[:action] == 'cooperation' ? 'active':''%>">
+      <%= link_to "", devices_static_pages_path %>
+    </p>
+    <p id="firma-button"
+    class="<%= params[:action] == 'company' || params[:action] == 'contact' || params[:controller] == 'news' ? 'active':''%>">
+      <%= link_to "", company_page_path %>
+    </p>
+  </div>
+</div>

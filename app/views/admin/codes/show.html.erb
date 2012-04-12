@@ -1,0 +1,9 @@
+<h1>Numer:</h1>
+<h2><%= @code.number %></h2>
+<h1>Opis:</h1>
+<div style="font-size: 16px;">
+  <%= raw(@code.text) %>
+</div>
+<br/><br/>
+<%= button_to "Edytuj", edit_admin_code_path(@code), :method => :get, :class => "left"%>
+<%= button_to "Powrót", admin_codes_path, :method => :get, :class => "left" %>

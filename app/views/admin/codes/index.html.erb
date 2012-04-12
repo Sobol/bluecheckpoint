@@ -1,0 +1,37 @@
+<div>
+  <%= form_tag admin_codes_path, :method => 'get', :id => 'codes-search-form' do %>
+    <p class="search">
+      <%= text_field_tag "q", nil, :placeholder => "Szukaj..." %>
+    </p>
+    <p id="commit">
+      <%= submit_tag '' %>
+    </p>
+  <% end %>
+  <p id="add-codes-button">
+    <%= link_to "Dodaj", new_admin_code_path %>
+  </p>
+</div><br/><br/><br/><br/><br/>
+
+<table id="news">
+  <thead>
+    <tr>
+      <th class="title">Numer</th>
+      <th class="content">Opis</th>
+      <th class="actions">Edytuj/Usuń</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @codes.each do |c| %>
+      <tr>
+        <td><%= link_to c.number, admin_code_path(c)%></td>
+        <td><%= code_description(c) %></td>
+        <td>
+          <%= link_to "Edytuj", edit_admin_code_path(c)%>
+           <%= link_to "Usuń", admin_code_path(c), :method=>:delete, :class=>:destroy, :confirm=>"Napewno chcesz usunąć ?" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @codes %>

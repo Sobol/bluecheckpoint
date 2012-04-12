@@ -1,0 +1,21 @@
+<%= form_for @news, :url => (@news.persisted? ? admin_news_path(@news) : admin_news_index_path) do |f| %>
+  <%= render 'admin/shared/error_messages', :object => f.object -%>
+  <table>
+    <tr>
+      <td><%= f.label :title, 'Tytuł:' %></td>
+    </tr>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :content, 'Treść:', :class=>"news-form-content" %></td>
+    </tr>
+      <td><%= f.text_area :content %></td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.submit "Zapisz", :class => "left" %>
+        <%= link_to "Cofnij", admin_news_index_path, :class => "left" %>
+      </td>
+    </tr>
+  </table>
+<% end %>
