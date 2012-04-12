@@ -1,6 +1,6 @@
 development:
-  adapter: mysql2
-  database: checkn_development
+  adapter: postgresql
+  database: bluecheckpoint_development
   pool: 5
   timeout: 5000
   encoding: utf8
@@ -9,8 +9,8 @@ development:
   host: localhost
 
 test:
-  adapter: mysql2
-  database: checkn_test
+  adapter: postgresql
+  database: bluecheckpoint_test
   pool: 5
   timeout: 5000
   encoding: utf8
@@ -19,8 +19,8 @@ test:
   host: localhost
 
 production:
-  adapter: mysql2
-  database: checkn_production
+  adapter: postgresql
+  database: bluecheckpoint_production
   pool: 5
   timeout: 5000
   encoding: utf8
