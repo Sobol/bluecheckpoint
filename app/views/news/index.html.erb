@@ -1,38 +1,55 @@
-<%= stylesheet_link_tag "app/jquery.fancybox-1.3.4" %>
-
-<% content_for :javascripts do %>
-  <%= javascript_include_tag "lib/jquery.fancybox-1.3.4.pack.js", "app/news" %>
-<% end %>
-
-<div class="static news">
-  <p>
-    W dziale "AKTUALNOŚCI" znajdą Państwo informacje dotyczące nowości wprowadzanych w naszej
-ofercie, stronie internetowej i bieżących wydarzeń w firmie.
-  </p>
-</div>
-
-<ul class="news-container">
-<%= image_tag "layouts/static-bg-half.png", alt: 'news bg', class: "news-bg" %>
-  <% @news.each do |news| %>
-    <li>
-      <h2><%= news.title%></h2>
-      <p class="created-at">Dodano: <%= news.created_at.to_formatted_s(:db) %></p>
-      <% if news.content.length >= 100 %>
-        <div style="display: none">
-          <div id="popup-<%=news.id%>" class="popup">
-            <h2><%= news.title%></h2>
-            <p class="created-at">Dodano: <%= news.created_at.to_formatted_s(:db) %></p>
+<section class="main">
+  <div id="left-sidebar">
+    <%= image_tag "circle.png", id: 'circle' -%>
+    <%= image_tag "circle-images/firma.png", alt: 'company', class: 'main-image hidden' %>
+    <%= image_tag "circle-images/kontakt.png", alt: 'contact', class: 'main-image hidden' %>
+    <%= image_tag "circle-images/aktualnosci.png", alt: 'news', class: 'main-image active' %>
+  </div>
+  <div id="subheader">
+    <%= image_tag "company_main_line.png", alt: 'company line', id: 'main-line' -%>
+    <%= image_tag "dot.png", alt: 'dot', id: 'dot' -%>
+    <div class="submenu-buttons">
+      <p id="kontakt-button" img-data="contact">
+        <%= link_to "", contact_static_pages_path, :class=>"left"  %>
+      </p>
+      <p id="aktualnosci-button" class="active" img-data="news">
+        <%= link_to "", news_index_path, :class=>"middle"  %>
+      </p>
+    </div>
+    <%= image_tag "submenu_line_left.png", alt: 'left line', id: 'left-line' -%>
+    <%= image_tag "submenu_line_middle.png", alt: 'middle line', id: 'middle-line', class: "active-line" -%>
+  </div>
+  <div id="content">
+    <div class="static news">
+      <p>
+        W dziale "AKTUALNOŚCI" znajdą Państwo informacje dotyczące nowości wprowadzanych w naszej
+    ofercie, stronie internetowej i bieżących wydarzeń w firmie.
+      </p>
+    </div>
+    <ul class="news-container">
+    <%= image_tag "static-bg-half.png", alt: 'news bg', class: "news-bg" %>
+      <% @news.each do |news| %>
+        <li>
+          <h2><%= news.title%></h2>
+          <p class="created-at">Dodano: <%= news.created_at.to_formatted_s(:db) %></p>
+          <% if news.content.length >= 100 %>
+            <div style="display: none">
+              <div id="popup-<%=news.id%>" class="popup">
+                <h2><%= news.title%></h2>
+                <p class="created-at">Dodano: <%= news.created_at.to_formatted_s(:db) %></p>
+                <p><%= news.content %></p>
+              </div>
+            </div>
+            <p>
+              <%= main_article_description(news) %>
+            </p>
+            <%= link_to "więcej", "#popup-" + news.id.to_s %>
+          <% else %>
             <p><%= news.content %></p>
-          </div>
-        </div>
-        <p>
-          <%= main_article_description(news) %>
-        </p>
-        <%= link_to "więcej", "#popup-" + news.id.to_s %>
-      <% else %>
-        <p><%= news.content %></p>
+          <% end %>
+        </li>
       <% end %>
-    </li>
-  <% end %>
-</ul>
-<%= will_paginate @news %>
+    </ul>
+    <%= will_paginate @news %>
+</section>
+

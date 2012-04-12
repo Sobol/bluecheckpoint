@@ -178,6 +178,7 @@ body {
 }
 
 .news-container {
+  color: #fff;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -220,6 +221,15 @@ li:nth-child(2) {
 .pagination a{
   color: white !important;
   text-decoration: none;
+}
+
+.pagination .disabled {
+  display: none;
+}
+
+.pagination .current {
+  color: white !important;
+  font-weight: 700;
 }
 
 ul.news-container li a{

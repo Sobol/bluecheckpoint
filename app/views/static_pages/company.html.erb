@@ -9,7 +9,7 @@
     <%= image_tag "company_main_line.png", alt: 'company line', id: 'main-line' -%>
     <%= image_tag "dot.png", alt: 'dot', id: 'dot' -%>
     <div class="submenu-buttons">
-      <p id="kontakt-button" class="<%=  'active' if params[:action] == 'contact' %>" img-data="contact">
+      <p id="kontakt-button" img-data="contact">
         <%= link_to "", contact_static_pages_path, :class=>"left"  %>
       </p>
       <p id="aktualnosci-button" img-data="news">

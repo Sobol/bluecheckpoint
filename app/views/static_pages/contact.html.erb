@@ -1,19 +1,42 @@
-<div class="static">
-  <p class="centered">
-    Blue Check Point<br />
-    Makal Tomasz<br />
-    15-396 Białystok<br />
-    ul. Mikołaja Kopernika 97<br />
-    NIP 542-125-65-38<br /><br />
+<section class="main">
+  <div id="left-sidebar">
+    <%= image_tag "circle.png", id: 'circle' -%>
+    <%= image_tag "circle-images/firma.png", alt: 'company', class: 'main-image hidden' %>
+    <%= image_tag "circle-images/kontakt.png", alt: 'contact', class: 'main-image active' %>
+    <%= image_tag "circle-images/aktualnosci.png", alt: 'news', class: 'main-image hidden' %>
+  </div>
+  <div id="subheader">
+    <%= image_tag "company_main_line.png", alt: 'company line', id: 'main-line' -%>
+    <%= image_tag "dot.png", alt: 'dot', id: 'dot' -%>
+    <div class="submenu-buttons">
+      <p id="kontakt-button" class="active">
+        <%= link_to "", contact_static_pages_path, :class=>"left"  %>
+      </p>
+      <p id="aktualnosci-button" img-data="news">
+        <%= link_to "", news_index_path, :class=>"middle"  %>
+      </p>
+    </div>
+    <%= image_tag "submenu_line_left.png", alt: 'left line', id: 'left-line', class: "active-line" -%>
+    <%= image_tag "submenu_line_middle.png", alt: 'middle line', id: 'middle-line' -%>
+  </div>
+  <div id="content">
+    <div class="static">
+      <p class="centered">
+        Blue Check Point<br />
+        Makal Tomasz<br />
+        15-396 Białystok<br />
+        ul. Mikołaja Kopernika 97<br />
+        NIP 542-125-65-38<br /><br />
 
-    kontakt@bluecheckpoint.pl<br />
-    www.bluecheckpoint.pl<br />
-    www.bluecheckpoint.com<br /><br />
+        kontakt@bluecheckpoint.pl<br />
+        www.bluecheckpoint.pl<br />
+        www.bluecheckpoint.com<br /><br />
 
-    tel.kom. 698 669 959<br />
-    tel.kom. 602 151 806<br />
-    tel.kom.informacyjny 605 689 959
-  </p>
-</div>
-<p class="bottom-bg"></p>
+        tel.kom. 698 669 959<br />
+        tel.kom. 602 151 806<br />
+        tel.kom.informacyjny 605 689 959
+      </p>
+    </div>
+    <p class="bottom-bg"></p>
+</section>
 
