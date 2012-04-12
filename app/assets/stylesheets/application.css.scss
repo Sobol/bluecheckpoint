@@ -45,6 +45,10 @@ body {
   margin: 0 auto;
 }
 
+#circle {
+  width: 475px;
+}
+
 .welcome-controller.index-action #circle {
   left: 130px;
   top: 35px;
@@ -52,9 +56,22 @@ body {
   position: absolute;
 }
 
+#content {
+  float: left;
+  width: 45%;
+  position: relative;
+  top: 65px;
+}
+
+.welcome-controller.index-action #content {
+  width: 100%;
+}
+
 #circle-content {
   width: 255px;
   position: absolute;
+  left: 258px;
+  top: 153px;
 }
 
 .welcome-controller.index-action #circle-content {
@@ -63,35 +80,47 @@ body {
   width: 292px;
 }
 
-.static {
-  left: 573px !important;
-  top: -620px !important;
-}
-
-#subheader, #main {
-  display: none !important;
-}
-
 #images {
   position: relative;
 }
 
-/* ------------------------------------------ */
-
-#images .main-image,
-#images img.hidden {
-  margin-top: -481px;
-  margin-left: -198px;
-  position: absolute;
-  width: 355px;
+#left-sidebar {
+  width: 55%;
+  float: left;
+  top: -35px; 
+  left: 28px;
+  position: relative;
 }
 
-#images img.hidden {
+.main-image {
+  position: absolute;
+  left: 55px;
+  top: 44px;
+  width: 365px;
+}
+
+.hidden {
   display: none;
 }
 
+.static {
+  color: white;
+  font-size: 13px;
+  text-align: justify;
+  background-image: image_url("static-bg.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  width: 438px;
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+/* ------------------------------------------ */
+
 .main {
-	width: 900px;
+	width: 1024px;
 	margin: 0 auto;
 }
 
@@ -104,17 +133,8 @@ body {
   text-align: justify;
 }
 
-#main .static {
-  padding: 10px 10px;
-  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src= image_path('static-bg.png.png'),sizingMethod='scale');
-}
 
-#main .static.normal {
-  padding: 10px 10px;
-  background-image: image_url("static-bg.png");
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-}
+
 
 #main-bg {
   width: 458px;
@@ -143,20 +163,9 @@ body {
   margin-top: 0px;
 }
 
-.static .centered {
-  margin-top: 30px;
-  font-size: 14px;
-  text-align: center;
-  height: 251px;
-}
-
 #main-bg.news {
   margin-top: 35px;
   height: 105px  !important;
-}
-
-.static.news {
-  top: -95px !important;
 }
 
 #map {
@@ -233,10 +242,6 @@ ul.news-container li a{
 .created-at {
   font-size: 11px !important;
   margin-top: -10px;
-}
-
-.static div {
-  height: 470px;
 }
 
 p.search {

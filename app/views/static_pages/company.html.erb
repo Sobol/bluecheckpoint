@@ -1,29 +1,48 @@
-<% content_for :header do %>
-  <%= render :partial => "shared/subheader" %>
-<%end%>
-
-<div class="static">
-  <p>
-    Elektroniką i diagnostyką samochodową zajmujemy się od 1990 roku.
-    Posiadamy rozległą wiedzę zarówno teoretyczną jak też praktyczną w zakresie obsługi
-    wszelkiego rodzaju pojazdów silnikowych ze szczególnym uwzględnieniem układów
-    elektromechanicznych i elektronicznych stosowanych w motoryzacji.
-  </p>
-  <p>
-    W obecnej formie firma istnieje od 2007 roku. Postęp technologiczny oraz zainteresowanie
-    niszowymi rozwiązaniami zaowocowały w 2011 roku realizacją nowatorskiego na skalę europejską projektu -
-    udostępnienia każdemu kierowcy możliwości łatwej, szybkiej i taniej komputerowej diagnostyki
-    własnego pojazdu.
-  </p>
-  <p>
-    Dostęp do wiedzy i możliwości dostępnych dotychczas jedynie dla profesjonalistów i
-    wyspecjalizowanych warsztatów jest realizowany za pomocą stacjonarnego urządzenia,
-    którego jesteśmy pomysłodawcami i współtwórcami.
-  </p>
-  <p>
-    Dystrybucja i obsługa urządzeń "BLUE CHECK POINT" jest obecnie głównym zadaniem
-    realizowanym przez firmę i trzonem jej działalności.
-  </p>
-</div>
-<p class="bottom-bg"></p>
-
+<section class="main">
+  <div id="left-sidebar">
+    <%= image_tag "circle.png", id: 'circle' -%>
+    <%= image_tag "circle-images/firma.png", alt: 'company', class: 'main-image active' %>
+    <%= image_tag "circle-images/kontakt.png", alt: 'contact', class: 'main-image hidden' %>
+    <%= image_tag "circle-images/aktualnosci.png", alt: 'news', class: 'main-image hidden' %>
+  </div>
+  <div id="subheader">
+    <%= image_tag "company_main_line.png", alt: 'company line', id: 'main-line' -%>
+    <%= image_tag "dot.png", alt: 'dot', id: 'dot' -%>
+    <div class="submenu-buttons">
+      <p id="kontakt-button" class="<%=  'active' if params[:action] == 'contact' %>" img-data="contact">
+        <%= link_to "", contact_static_pages_path, :class=>"left"  %>
+      </p>
+      <p id="aktualnosci-button" img-data="news">
+        <%= link_to "", news_index_path, :class=>"middle"  %>
+      </p>
+    </div>
+    <%= image_tag "submenu_line_left.png", alt: 'left line', id: 'left-line' -%>
+    <%= image_tag "submenu_line_middle.png", alt: 'middle line', id: 'middle-line' -%>
+  </div>
+  <div id="content">
+    <div class="static">
+      <p>
+        Elektroniką i diagnostyką samochodową zajmujemy się od 1990 roku.
+        Posiadamy rozległą wiedzę zarówno teoretyczną jak też praktyczną w zakresie obsługi
+        wszelkiego rodzaju pojazdów silnikowych ze szczególnym uwzględnieniem układów
+        elektromechanicznych i elektronicznych stosowanych w motoryzacji.
+      </p>
+      <p>
+        W obecnej formie firma istnieje od 2007 roku. Postęp technologiczny oraz zainteresowanie
+        niszowymi rozwiązaniami zaowocowały w 2011 roku realizacją nowatorskiego na skalę europejską projektu -
+        udostępnienia każdemu kierowcy możliwości łatwej, szybkiej i taniej komputerowej diagnostyki
+        własnego pojazdu.
+      </p>
+      <p>
+        Dostęp do wiedzy i możliwości dostępnych dotychczas jedynie dla profesjonalistów i
+        wyspecjalizowanych warsztatów jest realizowany za pomocą stacjonarnego urządzenia,
+        którego jesteśmy pomysłodawcami i współtwórcami.
+      </p>
+      <p>
+        Dystrybucja i obsługa urządzeń "BLUE CHECK POINT" jest obecnie głównym zadaniem
+        realizowanym przez firmę i trzonem jej działalności.
+      </p>
+    </div>
+    <p class="bottom-bg"></p>
+  </div>
+</section>

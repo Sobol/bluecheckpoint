@@ -1,9 +1,7 @@
 $(function(){
-  $("#menu-buttons p a").mouseover(function(e){
-    $(this).parent().toggleClass("hovered");
-  }).mouseout(function(){
-    $(this).parent().toggleClass("hovered");
-  });
+  $("#menu-buttons p a").hover(function(e){
+    $(this).parent().toggleClass("active");
+  })
 
   $("#subheader p a").hover(function() {
     var imgData = $(this).parent().attr("img-data");
@@ -18,7 +16,7 @@ $(function(){
     if (!$(this).parent().hasClass("active")) {
       if (imgData !="partners" ) {
         $("[alt="+imgData+"]").fadeOut('fast', function() {
-          $(".main-image").stop(false, true).css("display","inline");
+          $(".main-image.active").stop(false, true).css("display","inline");
         });
       }
     }
