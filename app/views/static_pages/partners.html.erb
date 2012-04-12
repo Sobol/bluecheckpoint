@@ -1,7 +1,28 @@
-<div class="static">
-  <p class="centered">
-    Dział w budowie
-  </p>
-</div>
-<p class="bottom-bg"></p>
-
+<section class="main">
+  <div id="left-sidebar">
+    <%= image_tag "circle.png", id: 'circle' -%>
+    <%= image_tag "circle-images/partnerzy.png", alt: 'partners', class: 'main-image active' %>
+    <%= image_tag "circle-images/technodiag.png", alt: 'technodiag', class: 'main-image hidden' %>
+  </div>
+  <div id="subheader">
+    <%= image_tag "partners_main_line.png", alt: 'devices line', id: 'main-line' -%>
+    <%= image_tag "dot.png", alt: 'dot', id: 'dot' -%>
+    <div class="submenu-buttons">
+      <p id="technodiag-button" img-data="technodiag">
+        <%= link_to "", "http://www.technodiag.com", :class=>"left"  %>
+      </p>
+      <p id="" class="not-visible" img-data="cooperation">
+          <%= link_to "", "", :class=>"middle"  %>
+      </p>
+    </div>
+    <%= image_tag "submenu_line_left.png", alt: 'left line', id: 'left-line'-%>
+  </div>
+  <div id="content">
+    <div class="static">
+      <p class="centered">
+        Dział w budowie
+      </p>
+    </div>
+    <p class="bottom-bg"></p>
+  </div>
+</section>

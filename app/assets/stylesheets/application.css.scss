@@ -116,6 +116,12 @@ body {
   text-align: center;
 }
 
+.static .centered {
+  font-size: 14px;
+  height: 251px;
+  margin-top: 30px;
+  text-align: center;
+}
 
 /* ------------------------------------------ */
 
@@ -132,9 +138,6 @@ body {
   font-size: 13px;
   text-align: justify;
 }
-
-
-
 
 #main-bg {
   width: 458px;
@@ -200,7 +203,6 @@ li:nth-child(2) {
 .news-container p {
   font-size: 15px;
 }
-
 
 .ie6 .news-bg,
 .ie7 .news-bg,
