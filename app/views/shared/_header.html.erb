@@ -3,7 +3,7 @@
   <div id="menu-buttons">
     <p id="pomoc-button"
     class="<%= params[:action] == 'help' || params[:action] == 'codes' || params[:action] == 'connectors' || params[:action] == 'cars' ? 'active':''%>">
-      <%= link_to "", help_static_pages_path %>
+      <%= link_to "", help_page_path %>
     </p>
     <p id="partnerzy-button"
     class="<%= params[:action] == 'partners' || params[:action] == 'technodiag' || params[:action] == 'imedia' ? 'active':''%>">

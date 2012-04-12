@@ -39,12 +39,6 @@
   position: relative;
 }
 
-#dot-help {
-  top: 5px;
-  right: 119px;
-  position: relative;
-}
-
 /* company */
 #aktualnosci-button {
   background-image: image_url("aktualnosci.png");
@@ -155,7 +149,8 @@
 }
 
 #right-line {
-  width: 459px;
+  width: 548px;
+  left: -195px;
 }
 
 #left-line.active-line, #middle-line.active-line, #right-line.active-line {

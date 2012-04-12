@@ -1,7 +1,35 @@
-<div class="static">
-  <p class="centered">
-    Dział w budowie
-  </p>
-</div>
-<p class="bottom-bg"></p>
-
+<section class="main">
+  <div id="left-sidebar">
+    <%= image_tag "circle.png", id: 'circle' -%>
+    <%= image_tag "circle-images/pomoc.png", alt: 'help', class: 'main-image hidden' %>
+    <%= image_tag "circle-images/kody.png", alt: 'codes', class: 'main-image hidden' %>
+    <%= image_tag "circle-images/zlacza.png", alt: 'connectors', class: 'main-image hidden' %>
+    <%= image_tag "circle-images/samochody.png", alt: 'cars', class: 'main-image active' %>
+  </div>
+  <div id="subheader">
+    <%= image_tag "help_main_line.png", alt: 'cars line', id: 'main-line' -%>
+    <%= image_tag "dot.png", alt: 'dot', id: 'sub-dot' -%>
+    <div class="submenu-buttons">
+      <p id="kody-button" img-data="codes">
+        <%= link_to "", codes_page_path, :class=>"left" %>
+      </p>
+      <p id="zlacza-button" img-data="connectors">
+        <%= link_to "", connectors_page_path, :class=>"middle" %>
+      </p>
+      <p id="samochody-button" class="active" img-data="cars">
+        <%= link_to "", cars_page_path, :class=>"right" %>
+      </p>
+    </div>
+    <%= image_tag "submenu_line_left.png", alt: 'left line', id: 'left-line'-%>
+    <%= image_tag "submenu_line_middle.png", alt: 'middle line', id: 'middle-line' -%>
+    <%= image_tag "submenu_line_right.png", alt: 'right line', id: 'right-line', class: "active-line" -%>
+  </div>
+  <div id="content">
+    <div class="static">
+      <p class="centered">
+        Dział w budowie
+      </p>
+    </div>
+    <p class="bottom-bg"></p>
+  </div>
+</section>
