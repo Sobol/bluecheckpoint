@@ -64,6 +64,11 @@ body {
 }
 
 .welcome-controller.index-action #content {
+  left: 100px;
+  top: 0px;
+}
+
+.welcome-controller.index-action #content {
   width: 100%;
 }
 
@@ -137,8 +142,6 @@ body {
   top: -557px;
   left: 193px;
 }
-
-/* ------------------------------------------ */
 
 #main {
   float: right;

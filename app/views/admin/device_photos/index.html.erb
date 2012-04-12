@@ -8,7 +8,7 @@
     <% @device_photos.each do |img| %>
       <li>
         <%= image_tag(img.photo.url(:admin_thumb)) %>
-        <%= link_to image_tag("/images/fancybox/fancy_close.png", :class => "remove-image"), admin_device_photo_path(img), :confirm=>"Are you sure", :method=>:delete %>
+        <%= link_to image_tag("fancybox/fancy_close.png", :class => "remove-image"), admin_device_photo_path(img), :confirm=>"Are you sure", :method=>:delete %>
       </li>
     <% end %>
   </ul>

@@ -1,20 +1,28 @@
-<div id="menu">
-  <div id="menu-buttons">
-    <p id="news-button"
-    class="<%= params[:controller] == 'admin/news' ? 'active':''%>">
-      <%= link_to "NEWSY", admin_news_index_path %>
-    </p>
-    <p id="codes-button"
-    class="<%= params[:controller] == 'admin/codes' ? 'active':''%>">
-      <%= link_to "KODY", admin_codes_path %>
-    </p>
-    <p id="maps-button"
-    class="<%= params[:controller] == 'admin/maps' ? 'active':''%>">
-      <%= link_to "MAPY", admin_maps_path %>
-    </p>
-    <p id="images-button"
-    class="<%= params[:controller] == 'admin/device_photos' ? 'active':''%>">
-      <%= link_to "OBRAZKI", admin_device_photos_path %>
-    </p>
+<% unless params[:controller] == "devise/sessions"%>
+  <div id="menu">
+    <% if user_signed_in? %>
+      <div id="user_nav">
+        Witaj  <%= current_user.email %>.
+        <%= link_to "Wyloguj", destroy_user_session_path, :method => :delete %>
+      </div>
+    <% end %>
+    <div id="menu-buttons">
+      <p id="news-button"
+      class="<%= params[:controller] == 'admin/news' ? 'active':''%>">
+        <%= link_to "NEWSY", admin_news_index_path %>
+      </p>
+      <p id="codes-button"
+      class="<%= params[:controller] == 'admin/codes' ? 'active':''%>">
+        <%= link_to "KODY", admin_codes_path %>
+      </p>
+      <p id="maps-button"
+      class="<%= params[:controller] == 'admin/maps' ? 'active':''%>">
+        <%= link_to "MAPY", admin_maps_path %>
+      </p>
+      <p id="images-button"
+      class="<%= params[:controller] == 'admin/device_photos' ? 'active':''%>">
+        <%= link_to "OBRAZKI", admin_device_photos_path %>
+      </p>
+    </div>
   </div>
-</div>
+<% end %>
