@@ -10,7 +10,7 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
-gem 'mysql2'
+gem 'pg'
 gem "useragent"
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'rack-cache', :require => 'rack/cache'
