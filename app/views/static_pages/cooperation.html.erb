@@ -1,7 +1,30 @@
-<div class="static">
-  <p class="centered">
-    Dział w budowie
-  </p>
-</div>
-<p class="bottom-bg"></p>
-
+<section class="main">
+  <div id="left-sidebar">
+    <%= image_tag "circle.png", id: 'circle' -%>
+    <%= image_tag "circle-images/urzadzenia.png", alt: 'devices', class: 'main-image hidden' %>
+    <%= image_tag "circle-images/lokalizacje.png", alt: 'localization', class: 'main-image hidden' %>
+    <%= image_tag "circle-images/wspolpraca.png", alt: 'cooperation', class: 'main-image active' %>
+  </div>
+  <div id="subheader">
+    <%= image_tag "devices_main_line.png", alt: 'devices line', id: 'main-line' -%>
+    <%= image_tag "dot.png", alt: 'dot', id: 'dot' -%>
+    <div class="submenu-buttons">
+      <p id="lokalizacje-button" img-data="localization">
+        <%= link_to "", localization_page_path, :class=>"left"  %>
+      </p>
+      <p id="wspolpraca-button" class="active" img-data="cooperation">
+        <%= link_to "", cooperation_page_path, :class=>"middle"  %>
+      </p>
+    </div>
+    <%= image_tag "submenu_line_left.png", alt: 'left line', id: 'left-line'-%>
+    <%= image_tag "submenu_line_middle.png", alt: 'middle line', id: 'middle-line', class: "active-line" -%>
+  </div>
+  <div id="content">
+    <div class="static">
+      <p class="centered">
+        Dział w budowie
+      </p>
+    </div>
+    <p class="bottom-bg"></p>
+  </div>
+</section>
