@@ -21,13 +21,13 @@
   </div>
   <div id="content">
     <div class="static news">
+      <%= image_tag("static-bg.png", class:"static-bg")%>
       <p>
         W dziale "AKTUALNOŚCI" znajdą Państwo informacje dotyczące nowości wprowadzanych w naszej
     ofercie, stronie internetowej i bieżących wydarzeń w firmie.
       </p>
     </div>
     <ul class="news-container">
-    <%= image_tag "static-bg-half.png", alt: 'news bg', class: "news-bg" %>
       <% @news.each do |news| %>
         <li>
           <h2><%= news.title%></h2>
