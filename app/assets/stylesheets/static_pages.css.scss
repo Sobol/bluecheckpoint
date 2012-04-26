@@ -1,5 +1,7 @@
 .jcarousel {
   list-style: none;
+  position: absolute;
+  z-index: 100;
 }
 
 .jcarousel ul {
