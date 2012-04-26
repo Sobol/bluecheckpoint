@@ -345,6 +345,7 @@ p.search {
 }
 
 #myLoader {
+  display: none;
   z-index: 999;
   position: fixed;
   top:0px;
@@ -356,5 +357,9 @@ p.search {
 
 #myLoader img {
   margin: 0 auto;
+  display: block;
+}
+
+.welcome-controller.index-action #myLoader {
   display: block;
 }
