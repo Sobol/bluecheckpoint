@@ -9,5 +9,7 @@ class DevicePhoto < ActiveRecord::Base
                     :bucket => "bluecheckpoint-production",
                     :path => ":class/:id/:style.:extension",
                     :s3_headers => { :cache_control => "max-age=#{364.days.to_i}" },
-                    :s3_permissions => :public_read
+                    :s3_permissions => :public_read,
+                    :url => ":s3_eu_url",
+                    :use_timestamp => false
 end
