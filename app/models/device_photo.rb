@@ -6,7 +6,7 @@ class DevicePhoto < ActiveRecord::Base
                     :storage => :s3,
                     :s3_credentials => {:access_key_id => ENV['S3_KEY'],
                                         :secret_access_key => ENV['S3_SECRET']},
-                    :bucket => "bluecheckpoint",
+                    :bucket => ENV['S3_BACKET_NAME'],
                     :path => ":class/:id/:style.:extension",
                     :s3_headers => { :cache_control => "max-age=#{364.days.to_i}" },
                     :s3_permissions => :public_read
