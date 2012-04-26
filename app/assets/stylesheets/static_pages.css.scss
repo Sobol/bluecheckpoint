@@ -55,12 +55,12 @@
 
 #carousel .next{
   float: right;
-  background: url(/images/next.png) 6px 45% no-repeat;
+  background: image_url("next.png") 6px 45% no-repeat;
 }
 
 #carousel .prev{
   float: left;
-  background: url(/images/prev.png) 0 45% no-repeat;
+  background: image_url("prev.png") 0 45% no-repeat;
 }
 
 ul li.thumb:hover{
