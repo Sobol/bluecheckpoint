@@ -1,4 +1,20 @@
-<section class="main">
+<script type="text/javascript">//<![CDATA[
+    $(function() {
+      $(".background-image").load(function() {
+        $("#myLoader").hide();
+        $(".main").fadeIn("slow");
+      });
+
+      $('.popup .close').click(function(){
+        $('.popup, .overlay').fadeOut();
+        splashResizer(); // force reload once more
+      });
+    });
+  //]]></script>
+<div id="myLoader">
+  <%= image_tag "loading.gif", alt: "" %>
+</div>
+<section class="main" style="display:none;">
   <div id="content">
     <div id="images">
       <%= image_tag "circle.png", id: 'circle', class: "clearfix" -%>
