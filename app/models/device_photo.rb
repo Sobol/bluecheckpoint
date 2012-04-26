@@ -1,7 +1,7 @@
 class DevicePhoto < ActiveRecord::Base
   has_attached_file :photo,
-                    :styles => { :medium => "300x300>",
-                                 :thumb => "84x84>",
+                    :styles => { :thumb => "84x84>",
+                                 :large => "1024x768>",
                                  :admin_thumb => "120x120>" },
                     :storage => :s3,
                     :s3_credentials => {:access_key_id => ENV['S3_KEY'],

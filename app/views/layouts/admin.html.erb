@@ -14,13 +14,22 @@
   <title>BLUE CHECK POINT</title>
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <!--[if ie]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script>
+      document.createElement('header');
+      document.createElement('footer');
+    </script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS: implied media="all" -->
-  <%= stylesheet_link_tag "admin" %>
-  <%= javascript_include_tag "admin" %>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
   <%= yield :head %>
   <script type="text/javascript">
     var apiKey = '';
@@ -38,21 +47,18 @@
   <%= yield :scripts %>
 </head>
 
-<body class="<%= controller_name %>-controller <%= action_name %>-action">
-  <a id="top"></a>
+<body id="admin-body" class="<%= controller_name %>-controller <%= action_name %>-action">
+  <%= image_tag("main_background.png", class: "background-image") %>
   <header>
     <section>
+      <a id="top"></a>
       <%= render :partial => "shared/admin_header" %>
       <%= yield :head %>
     </section>
   </header>
 
   <section id="wrapper">
-    <div class="main">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
-    </div>
+    <%= yield %> <!--! end of #container -->
   </section>
 
   <%= render partial: "shared/footer" %>

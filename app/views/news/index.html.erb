@@ -27,29 +27,32 @@
     ofercie, stronie internetowej i bieżących wydarzeń w firmie.
       </p>
     </div>
-    <ul class="news-container">
-      <% @news.each do |news| %>
-        <li>
-          <h2><%= news.title%></h2>
-          <p class="created-at">Dodano: <%= news.created_at.to_formatted_s(:db) %></p>
-          <% if news.content.length >= 100 %>
-            <div style="display: none">
-              <div id="popup-<%=news.id%>" class="popup">
-                <h2><%= news.title%></h2>
-                <p class="created-at">Dodano: <%= news.created_at.to_formatted_s(:db) %></p>
-                <p><%= news.content %></p>
+    <div id="news-main-container">
+      <%= image_tag("static-bg-half.png", class:"static-bg-half")%>
+      <ul class="news-container">
+        <% @news.each do |news| %>
+          <li>
+            <h2><%= news.title%></h2>
+            <p class="created-at">Dodano: <%= news.created_at.to_formatted_s(:db) %></p>
+            <% if news.content.length >= 100 %>
+              <div style="display: none">
+                <div id="popup-<%=news.id%>" class="popup">
+                  <h2><%= news.title%></h2>
+                  <p class="created-at">Dodano: <%= news.created_at.to_formatted_s(:db) %></p>
+                  <p><%= news.content %></p>
+                </div>
               </div>
-            </div>
-            <p>
-              <%= main_article_description(news) %>
-            </p>
-            <%= link_to "więcej", "#popup-" + news.id.to_s %>
-          <% else %>
-            <p><%= news.content %></p>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
+              <p>
+                <%= main_article_description(news) %>
+              </p>
+              <%= link_to "więcej", "#popup-" + news.id.to_s %>
+            <% else %>
+              <p><%= news.content %></p>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
     <%= will_paginate @news %>
 </section>
 
