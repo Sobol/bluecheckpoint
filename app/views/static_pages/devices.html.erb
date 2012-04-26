@@ -20,21 +20,21 @@
     <%= image_tag "submenu_line_middle.png", alt: 'middle line', id: 'middle-line' -%>
   </div>
   <div id="content">
-    <% if @photos.count > 4 %>
-      <div id="carousel" class="jcarousel">
-        <div class="carousel_container">
-          <ul>
-            <% @photos.each do |p|%>
-              <li class="thumb">
-                <%= link_to image_tag(p.photo(:thumb)), p.photo(:large) %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    <% end %>
     <div class="static devices">
       <%= image_tag("static-bg.png", class:"static-bg")%>
+     <% if @photos.count > 4 %>
+        <div id="carousel" class="jcarousel">
+          <div class="carousel_container">
+            <ul>
+              <% @photos.each do |p|%>
+                <li class="thumb">
+                  <%= link_to image_tag(p.photo(:thumb)), p.photo(:large) %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
       <p>
         Urządzenie "BLUE CHECK POINT" jest stacjonarnym skanerem elektroniki samochodowej zgodnej
         ze standardem EOBD (posiada go większość pojazdów po 2000 r.) umożliwiającym odczyt i kasowanie błędów
