@@ -323,3 +323,23 @@ p.search {
 .not-visible {
   visibility: hidden;
 }
+
+.code-search {
+  position: absolute;
+  z-index: 100;
+  height: 55px;
+}
+
+.code-search input{
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  color: white;
+  font-size: 18px;
+  height: 29px;
+  line-height: 29px;
+  padding-left: 5px;
+}
+
+.static_pages-controller.codes-action .static {
+  height: 355px;
+}

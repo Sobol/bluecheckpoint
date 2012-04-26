@@ -17,11 +17,14 @@
 //= require_tree .
 
 $(function() {
-  $("#commit input").mouseover(function(e){
-    $(this).parent().toggleClass("hovered");
-  }).mouseout(function(){
-    $(this).parent().toggleClass("hovered");
-  });
+  $("#commit input").hover(
+    function () {
+      $("#commit").addClass("hover");
+    },
+    function () {
+      $("#commit").removeClass("hover");
+    }
+  );
   
   $("#menu-buttons p a").mouseover(function(e){
     $(this).parent().toggleClass("hovered");
