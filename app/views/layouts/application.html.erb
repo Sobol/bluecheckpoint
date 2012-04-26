@@ -48,6 +48,9 @@
 </head>
 
 <body class="<%= controller_name %>-controller <%= action_name %>-action">
+  <div id="myLoader">
+    <%= image_tag "loading.gif", alt: "" %>
+  </div>
   <%= image_tag("main_background.png", class: "background-image") %>
   <header>
     <section>

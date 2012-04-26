@@ -345,10 +345,12 @@ p.search {
 }
 
 #myLoader {
-  position:absolute;
+  z-index: 999;
+  position: fixed;
   top:0px;
   left:0px;
   width:100%;
+  background: #fff;
   height:100%;
 }
 
