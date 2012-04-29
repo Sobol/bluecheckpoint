@@ -1,14 +1,14 @@
 <script type="text/javascript">//<![CDATA[
     $(function() {
-      $(".background-image").load(function() {
+      if ($("html").hasClass("ie6") || $("html").hasClass("ie7") || $("html").hasClass("ie8")) {
         $("#myLoader").hide();
         $(".main").fadeIn("slow");
-      });
-
-      $('.popup .close').click(function(){
-        $('.popup, .overlay').fadeOut();
-        splashResizer(); // force reload once more
-      });
+      } else {
+        $(".background-image").load(function() {
+          $("#myLoader").hide();
+          $(".main").fadeIn("slow");
+        });
+      }
     });
   //]]></script>
 <section class="main" style="display:none;">
