@@ -18,3 +18,4 @@ gem 'aws-s3', :require => 'aws/s3'
 gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
 gem 'activerecord-postgis-adapter'
+gem 'gmaps4rails'

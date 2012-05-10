@@ -242,3 +242,23 @@
 
 #images ul li:first-child{ margin-left: -120px;}
 }
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style:none;
+  padding: 5px;
+  font-size: 17px;
+}
+
+.remove-spot {
+  position :relative;
+  top: 13px;
+  padding-right: 40px;  
+}
+
+#new_device_spot {
+  margin-top: 40px;
+}

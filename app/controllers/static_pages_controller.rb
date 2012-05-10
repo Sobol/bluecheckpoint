@@ -13,6 +13,7 @@ class StaticPagesController < ApplicationController
   end
 
   def localization
+    @device_spots = DeviceSpot.all.to_gmaps4rails
   end
 
   def cooperation

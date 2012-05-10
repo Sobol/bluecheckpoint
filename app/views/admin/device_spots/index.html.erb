@@ -1,0 +1,17 @@
+<div>
+  <%= form_for DeviceSpot.new, :url => admin_device_spots_path, :method => :post do |f| %>
+    <%= f.text_field :address %>
+    <%= f.submit 'Dodaj' %>
+  <% end %>
+</div>
+
+<ul>
+  <% @device_spots.each do |ds| %>
+    <li>
+      <%= link_to image_tag("fancybox/fancy_close.png", :class => "remove-spot"), admin_device_spot_path(ds), :confirm=>"Na pewno usunąć", :method=>:delete %>
+      <%= ds.address %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @device_spots %>

@@ -1,7 +1,7 @@
 Bluecheckpoint::Application.routes.draw do
   namespace :admin do
     resources :news, :only => [:index, :new, :show, :edit, :destroy, :create, :update]
-    resources :maps, :only => [:index]
+    resources :device_spots, :only => [:index, :create, :destroy]
     resources :codes, :only => [:index, :new, :show, :edit, :destroy, :create, :update]
     resources :device_photos, :only => [:index, :new, :destroy, :create]
     root :to => "news#index"
@@ -16,7 +16,7 @@ Bluecheckpoint::Application.routes.draw do
   match 'company' => 'static_pages#company', :as => :company_page
   match 'contact' => 'static_pages#contact', :as => :contact_page
   match 'devices' => 'static_pages#devices', :as => :devices_page
-  match 'localization' => 'static_pages#localization', :as => :localization_page
+  match 'map' => 'static_pages#localization', :as => :localization_page
   match 'cooperation' => 'static_pages#cooperation', :as => :cooperation_page
   match 'partners' => 'static_pages#partners', :as => :partners_page
   match 'help' => 'static_pages#help', :as => :help_page
