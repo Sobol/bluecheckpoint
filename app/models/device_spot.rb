@@ -5,6 +5,10 @@ class DeviceSpot < ActiveRecord::Base
   end
   
   def gmaps4rails_infowindow
-    "<p>#{self.name}</p>"
+    "#{self.name}"
+  end
+  
+  def gmaps4rails_title
+    "#{self.name}"
   end
 end
