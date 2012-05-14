@@ -350,7 +350,11 @@ p.search {
 }
 
 .codes-controller.index-action .static {
-  height: 355px;
+  height: 475px;
+}
+
+.codes-controller.index-action .pagination {
+  top: 526px !important;
 }
 
 #myLoader {

@@ -11,6 +11,16 @@
     </tr>
       <td><%= f.text_area :text %></td>
     </tr>
+    <tr id="brand">
+      <td>
+        <%= f.label :car_brand, "Marka" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.select :car_brand,  Code::BRANDS %> </br></br></br>
+      </td>
+    </tr>
     <tr>
       <td>
         <%= f.submit "Zapisz", :class => "left" %>

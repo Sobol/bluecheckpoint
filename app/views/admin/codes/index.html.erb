@@ -16,6 +16,7 @@
   <thead>
     <tr>
       <th class="title">Numer</th>
+      <th class="car_brand">Marka</th>
       <th class="content">Opis</th>
       <th class="actions">Edytuj/Usuń</th>
     </tr>
@@ -24,6 +25,7 @@
     <% @codes.each do |c| %>
       <tr>
         <td><%= link_to c.number, admin_code_path(c)%></td>
+        <td><%= c.car_brand %></td>
         <td><%= code_description(c) %></td>
         <td>
           <%= link_to "Edytuj", edit_admin_code_path(c)%>

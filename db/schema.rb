@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120510193646) do
+ActiveRecord::Schema.define(:version => 20120514155227) do
 
   create_table "codes", :force => true do |t|
     t.string   "number"
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "car_brand"
   end
 
   create_table "device_photos", :force => true do |t|

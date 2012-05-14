@@ -14,9 +14,12 @@
 //= require jquery_ujs
 //= require jquery.jcarousel
 //= require jquery.fancybox-1.3.4.pack
+//= require jquery.uniform
 //= require_tree .
 
 $(function() {
+  $("#car_brand").uniform();
+  
   $("#commit input").hover(
     function () {
       $("#commit").addClass("hover");

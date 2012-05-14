@@ -32,6 +32,9 @@
           <p class="search">
             <%= text_field_tag "q", nil, :placeholder => "Szukaj..." %>
           </p>
+          <p class="search-brand">
+            <%= select_tag :car_brand, options_for_select(Code::BRANDS, params[:car_brand]) %>
+          </p>
           <p id="commit">
             <%= submit_tag '' %>
           </p>
@@ -46,8 +49,6 @@
       <% end %>
     </ul>
     </div>
-    <p class="bottom-bg">
-      <%= will_paginate @news %>
-    </p>
+    <%= will_paginate @news %>
   </div>
 </section>
