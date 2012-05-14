@@ -33,7 +33,7 @@
             <%= text_field_tag "q", nil, :placeholder => "Szukaj..." %>
           </p>
           <p class="search-brand">
-            <%= select_tag :car_brand, options_for_select(Code::BRANDS, params[:car_brand]) %>
+            <%= select_tag :car_brand, options_for_select(Code::BRANDS, params[:car_brand]), {:include_blank => true} %>
           </p>
           <p id="commit">
             <%= submit_tag '' %>

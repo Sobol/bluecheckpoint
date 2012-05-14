@@ -61,6 +61,7 @@ body {
   width: 45%;
   position: relative;
   top: 65px;
+  padding-bottom: 20px;
 }
 
 .welcome-controller.index-action #content {
@@ -119,7 +120,7 @@ body {
 
 .static-bg-half {
   top: 143px !important;
-  height: 485px !important;
+  height: 575px !important;
 }
 
 .static {
@@ -179,11 +180,11 @@ body {
 
 .static_pages-controller.devices-action .pagination, 
 .static_pages-controller.devices-action .bottom-bg {
-  top: 683px !important;
+  top: 595px !important;
 }
 
 .news-controller.index-action .pagination {
-  top: 630px !important;
+  top: 715px !important;
   width: 440px;
   padding-right: 20px;
 }
@@ -209,14 +210,14 @@ body {
   padding: 1px 0 0 0;
   margin: 0;
   margin-top: 15px;
-  height: 470px;
+  height: 560px;
   position: absolute;
   z-index: 100;
 }
 
 #news-main-container {
   margin-top: 143px;
-  height: 470px;
+  height: 560px;
 }
 
 .news-container li {
