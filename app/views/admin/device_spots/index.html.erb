@@ -1,6 +1,7 @@
 <div>
   <%= form_for DeviceSpot.new, :url => admin_device_spots_path, :method => :post do |f| %>
     <%= f.text_field :address %>
+    <%= f.text_field :name %>
     <%= f.submit 'Dodaj' %>
   <% end %>
 </div>

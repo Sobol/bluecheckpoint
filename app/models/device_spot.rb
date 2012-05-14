@@ -3,4 +3,8 @@ class DeviceSpot < ActiveRecord::Base
   def gmaps4rails_address
     "#{self.address}" 
   end
+  
+  def gmaps4rails_infowindow
+    "<p>#{self.name}</p>"
+  end
 end
