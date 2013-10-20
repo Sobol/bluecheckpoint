@@ -1,12 +1,11 @@
 GIT
   remote: http://github.com/thoughtbot/paperclip.git
-  revision: a2a4c7a1355c758dff2012d13cb1d2df6b4bc73d
+  revision: 1d8982325fb43ee654b9476b34213a37429d7e22
   specs:
-    paperclip (3.0.1)
+    paperclip (3.5.1)
       activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
-      cocaine (>= 0.0.2)
+      cocaine (~> 0.5.0)
       mime-types
 
 GEM
@@ -53,8 +52,11 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.0.1)
-    builder (3.0.0)
-    cocaine (0.2.1)
+    builder (3.0.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.2)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -76,7 +78,7 @@ GEM
     httparty (0.8.1)
       multi_json
       multi_xml
-    i18n (0.6.0)
+    i18n (0.6.5)
     journey (1.0.3)
     jquery-rails (2.0.2)
       railties (< 5.0, >= 3.2.0)
@@ -86,8 +88,8 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.18)
-    multi_json (1.2.0)
+    mime-types (1.25)
+    multi_json (1.8.2)
     multi_xml (0.4.2)
     nokogiri (1.5.2)
     orm_adapter (0.0.7)
@@ -137,7 +139,7 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.33)
+    tzinfo (0.3.38)
     uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
